@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Contact List App</title>
-    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="edit.css">
 </head>
 <body>
@@ -27,28 +27,28 @@
         <section class="contact-info">
             <div class="contact-sub-info">
                 <i class="fas fa-user icon-style"></i>
-                <input type="text" class="type" name="fullname" placeholder="Full Name">
+                <input type="text" class="type" id="newPersonName" name="fullname" placeholder="Full Name">
             </div>
 
             <div class="contact-sub-info">
                 <i class="fas fa-phone icon-style"></i>
-                <input type="text" class="type" name="phone" placeholder="Phone no.">
+                <input type="text" class="type" id="newPersonphone"  name="phone" placeholder="Phone no.">
             </div>
 
             <div class="contact-sub-info">
                 <i class="fas fa-sms text icon-style"></i>
-                <input type="text" class="type" name="relationship" placeholder="Relationship">
+                <input type="text" class="type" id="newPersonRelation"  name="relationship" placeholder="Relationship">
 
             </div>
 
             <div class="contact-sub-info">
                 <i class="fas fa-envelope icon-style"></i>
-                <input type="text" class="type" name="email" placeholder="Email">
+                <input type="text" class="type" id="newPersonEmail"  name="email" placeholder="Email">
             </div>
 
             <div class="contact-sub-info">
                 <i id="location-icon" class="fas fa-map-marker-alt icon-style"></i>
-                <input type="text" class="type" name="address" placeholder="Address">
+                <input type="text" class="type" id="newPersonAddress"  name="address" placeholder="Address">
             </div>
         </section>
 
@@ -56,7 +56,7 @@
             <a href="#">
                 <div class="update-contact">
                     <i class="fas fa-check-circle icon-style"></i>
-                    <button class="btn ">Save Contact</button>
+                    <button class="btn" id="newPersonSubmitBtn">Save Contact</button>
                 </div>
             </a>
         </section>
@@ -65,14 +65,16 @@
             <a href="../Delete-page/delete.html">
                 <div class="update-contact">
                     <i class="fas fa-trash icon-style"></i>
-                    <button class="btn">Delete Contact</button>
+                    <button class="btn" id="newDeleteBtn">Delete Contact</button>
                 </div>
             </a>
         </section>
-
-
-       
-
     </div>
+
+    <button id="clearBtn"
+    style="position:absolute; left:0; top:0;"
+    >Clear</button>
+
+    <script src="../script.js"></script>
 </body>
 </html>
