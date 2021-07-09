@@ -10,12 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <title>Contact List App</title>
     <!-- <link rel="stylesheet" href="../style.css"> -->
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="edit.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="../index.html">
+            <a href="../Contact-profile/profile.html">
                 <i class="fas fa-chevron-circle-left back-btn"></i>
             </a>
             <div class="info">
@@ -26,36 +26,51 @@
 
         <section class="contact-info">
             <div class="contact-sub-info">
+                <i class="fas fa-user icon-style"></i>
+                <input type="text" class="type" name="fullname" placeholder="Full Name">
+            </div>
+
+            <div class="contact-sub-info">
                 <i class="fas fa-phone icon-style"></i>
-                <p class="contact-phone-no">999999855</p>
+                <input type="text" class="type" name="phone" placeholder="Phone no.">
             </div>
 
             <div class="contact-sub-info">
                 <i class="fas fa-sms text icon-style"></i>
-                <p class="contact-sms">Send Message</p>
+                <input type="text" class="type" name="relationship" placeholder="Relationship">
+
             </div>
 
             <div class="contact-sub-info">
                 <i class="fas fa-envelope icon-style"></i>
-                <p class="contact-email">random@gmail.com</p>
+                <input type="text" class="type" name="email" placeholder="Email">
             </div>
 
             <div class="contact-sub-info">
                 <i id="location-icon" class="fas fa-map-marker-alt icon-style"></i>
-                <p class="contact-phone-no">25 Baker's Street</p>
+                <input type="text" class="type" name="address" placeholder="Address">
             </div>
         </section>
 
-        <a href="http://">
-            <section class="edit-contact">
-                <a href="../Edit-contact/edit.html">
-                    <div class="edit-btn">
-                        <i class="fas fa-cog icon-style"></i>
-                    </div>
-                </a>
+        <section class="btn-container">
+            <a href="#">
+                <div class="update-contact">
+                    <i class="fas fa-check-circle icon-style"></i>
+                    <button class="btn ">Save Contact</button>
+                </div>
+            </a>
+        </section>
 
-            </section>
-        </a>
+        <section class="btn-container">
+            <a href="../Delete-page/delete.html">
+                <div class="update-contact">
+                    <i class="fas fa-trash icon-style"></i>
+                    <button class="btn">Delete Contact</button>
+                </div>
+            </a>
+        </section>
+
+
        
 
     </div>
