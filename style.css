@@ -29,6 +29,7 @@ i:hover{
     max-width: 428px;
     margin: 0 auto;
     background-color: #313438;
+    /* background: linear-gradient(90deg, rgba(66,159,124,1) 0%, rgba(161,193,78,1) 100%); */
 }
 
 header {
