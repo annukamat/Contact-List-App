@@ -1,5 +1,3 @@
-
-
 let refrehDOMTable = () => {
     let contactContainer = document.getElementById("contactTable");
 
@@ -12,7 +10,8 @@ let refrehDOMTable = () => {
     contactContainer.appendChild(newContactBody);
 
     for(let i=0; i<cmsTable.length; i++){
-        let listsofContact =    `
+        let listsofContact =    `<div data-aos="zoom-out-up" data-aos-anchor-placement="" data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000">
                                 <a href="./Contact-profile/profile.html" class="myHref">
                                     <div class="contact-section">
                                         <li class="list-item">
@@ -25,7 +24,7 @@ let refrehDOMTable = () => {
                                         </li>
                                     </div>
                                 </a>
-                                
+                                </div>
                                 <hr>`
         
         let div = document.createElement("div");
@@ -34,8 +33,17 @@ let refrehDOMTable = () => {
     }
     
 }
-refrehDOMTable();
 
+let init = () => {
+    if(localStorage.getItem(cmsKey)){
+        cmsTable = JSON.parse(localStorage.getItem(cmsKey));
+    }else {
+        cmsTable = cmsTableDemo;
+        localStorage.setItem(cmsKey, JSON.stringify(cmsTable));
+    }
+    refrehDOMTable();
+}
+init();
 
 
 

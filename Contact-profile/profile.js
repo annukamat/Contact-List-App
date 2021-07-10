@@ -32,15 +32,5 @@ userProfileContainer.innerHTML =`<header>
                                         <p class="contact-address">${profileToShow[0].address}</p>
                                     </div>
                                 </section>
-
-                                <a href="http://">
-                                    <section class="edit-contact">
-                                        <a href="../Edit-contact/edit.html">
-                                            <div class="edit-btn">
-                                                <i class="fas fa-cog icon-style"></i>
-                                            </div>
-                                        </a>
-
-                                </section>
-                                </a>`
+                                `
 
