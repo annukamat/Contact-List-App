@@ -10,9 +10,7 @@ let refrehDOMTable = () => {
     contactContainer.appendChild(newContactBody);
 
     for(let i=0; i<cmsTable.length; i++){
-        let listsofContact =    `<div data-aos="zoom-out-up" data-aos-anchor-placement="" data-aos-easing="ease-out-cubic"
-        data-aos-duration="1000">
-                                <a href="./Contact-profile/profile.html" class="myHref">
+        let listsofContact =    `<a href="./Contact-profile/profile.html" class="myHref">
                                     <div class="contact-section">
                                         <li class="list-item">
                                             <p class="contact-name">${cmsTable[i].key}</p>
@@ -23,9 +21,8 @@ let refrehDOMTable = () => {
                                             <i class="fas fa-sms text"></i>
                                         </li>
                                     </div>
-                                </a>
-                                </div>
-                                <hr>`
+                                    <hr>
+                                </a>`
         
         let div = document.createElement("div");
         div.innerHTML = listsofContact;
@@ -44,6 +41,25 @@ let init = () => {
     refrehDOMTable();
 }
 init();
+
+const searchContact = () => {
+    let filter = document.getElementById("contactSearch").value.toUpperCase();
+    let ul = document.getElementById("contactLists");
+    let li = ul.getElementsByTagName("a");
+
+    for(var i=0; i<li.length; i++){
+        let a = li[i].getElementsByClassName("contact-name")[0];
+        let textValue = a.textContent.toUp || a.innerHTML;
+
+        if(textValue.toUpperCase().indexOf(filter) > -1){
+            li[i].style.display = '';
+        }else{
+            li[i].style.display = 'none'
+        }
+        
+    }
+    
+}
 
 
 
